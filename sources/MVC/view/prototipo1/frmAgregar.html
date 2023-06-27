@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrmAgregar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../../css/eventos.css">
+    <link rel="shortcut icon" href="../../../img/Logo Etiqueta Cine Palomitas Retro Rojo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container mt-5">
+            <h3 class="text-center display-4">Ingresar Evento</h3>
+        <form action="preparar.php" method="post" enctype="multipart/form-data" name="frmAgregar">
+            <div class="d-flex justify-content-between mb-3">
+                <button type="reset" class="btn border border-secondary mb-3"><i class="bi bi-x-circle-fill text-secondary" ></i></button>
+                
+            </div>
+                <div class="form-floating mb-3">               
+                    <input type="text" class="form-control" placeholder="titulo" name="titulo" required>
+                    <label for="titulo">Titulo</label>
+                  </div>
+                <div class="form-floating">
+                    <textarea class="form-control descripcion" placeholder="Ingrese la descripcion" name="descripcion" maxlength="250" required></textarea>
+                    <label for="descripcion">Descripcion</label>
+                </div>
+                <h5>Ingresar Imagen</h5>
+                <div class="input-group ">
+                    <input type="file" class="form-control" id="inputGroupFile01" name="url_img">
+                  </div>
+                  <div class="text-center mt-3 ">
+                    <button type="submit" class="btn btn-success" name="agregar">Agregar</button>
+                    <a href="eventosAdmin.php" target="_blank" class="btn btn-secondary">
+                        Volver
+                    </a>
+                  </div>
+                </form>
+              </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</html>

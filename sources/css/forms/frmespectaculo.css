@@ -1,0 +1,82 @@
+@import url("../public/variables.css");
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form{
+    width: 50%;
+    margin: auto;    
+}
+.form h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form form{
+    display: flex;
+    flex-direction: column;   
+    gap:.5rem 
+}
+
+.form form input,.form form select{
+    padding: .7rem;
+    border-radius: .3rem;    
+    border: none;
+    outline: none;
+}
+.form form input{
+    border:1px solid var(--color-secundario);
+}
+
+.form form input[type="number"]{
+    width: 10%;
+}
+.form form input[type="file"]{
+    cursor: pointer;
+    width: 50%;    
+    border: none;
+    background-color: transparent;
+}
+.form form .funciones{    
+    width: 5%;
+    
+}
+select {
+    text-align: center;
+}
+.form form .caja .contenidoVariable{
+    border: 1px solid var(--color-acento-4);
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: .4rem;
+}
+.form form .caja .contenidoVariable .horarios{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.form form .caja .contenidoVariable{
+    margin-bottom: 1rem;
+}
+.form form .caja .contenidoVariable .horarios .fecha , .hora , .contActivo {
+    display: grid;
+    gap: .2rem;
+}
+.form form .caja .contenidoVariable p{
+    cursor: pointer;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid var(--color-acento-2);
+}
+.form form button[type="submit"]{
+    padding: .6rem;
+    background-color: var(--color-principal);
+    border: none;
+    border-radius: .4rem;
+}
+.form form button[type="submit"]:hover{
+    translate: 1px 2px;
+    cursor: pointer;
+}

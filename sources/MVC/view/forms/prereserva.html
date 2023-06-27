@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre Reserva tu Evento</title>
+    <link rel="stylesheet" href="../css/prereserva.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" target="_blank" class="cultura">CULTURA CENTER</a>
+        <a href="#" target="_blank" class="volver">Volver</a>
+    </div>
+    <div class="form">
+        <h3>Pre Reserva Tu Propio Evento</h3>
+        <form action="" id="formEvento">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo del Solicitante" required
+                autofocus>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="example@example.com">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" name="descripcion" id="descripcion" placeholder="Comentanos sobre Tu Evento" required>
+            <div class="horarios">
+                <div class="contHorarios">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" id="fecha" required>
+                </div>
+                <div class="contHorarios">
+                    <label for="hora">Hora</label>
+                    <input type="time" name="hora" id="hora">
+                </div>
+            </div>
+            <label for="categoria">Categoria</label>
+            <select name="categoria" id="categoria" required form="formEvento">
+                <option value="otro">Otro</option>
+                <option value="teatro">Teatro</option>
+                <option value="baile">Baile</option>
+                <option value="educativo">Educativo</option>
+            </select>
+            <span>Si no encuentra su Categoria elija "Otro"</span>
+            <label for="telefono">Numero Telefonico <span>(Opcional)</span></label>
+            <input type="tel" name="telefono" id="telefono">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div class="contImg">
+        <img src="../img/logo2.png" alt="">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,700;0,900;1,300&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    display:flex;
+    box-sizing: border-box;
+}
+.barraLeft{
+    width: 7vw;
+    height: 100vh;
+    border-right: 2px solid #F5EFFC;
+    box-sizing: border-box;
+    
+}
+.contIcono{
+    height:15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contIcono img{
+    width: 3rem ;
+    height: 3rem;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+.barraLeft form{
+    box-sizing: border-box;
+    display: grid;
+}
+.barraLeft form button{    
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    /*border-right: 5px solid blue;*/
+}
+.barraLeft form button img{
+    width: 2vw;
+    object-fit: contain;
+    
+}
+.barraLeft form button:hover img{
+    font-weight: 800;
+    filter: drop-shadow(0 0px 1px #4F45B6);
+}
+.contenedor{
+    width:93vw ;
+    height: 100vh;
+}
+.barraTop{
+    height: 15vh;
+    border-bottom: 2px solid #F5EFFC;
+    box-sizing: border-box;
+    display: flex;
+}
+.barraTop .encabezado {
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.barraTop .encabezado a{
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #555;
+    text-shadow: 1px 1px 5px #4F45B6;
+}
+.barraTop .encabezado a:hover{
+    border-bottom: 2px solid #555;
+}
+.barraTop .datosUsuario{
+    height: 100%;
+    width: 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #F5EFFC;
+    font-family: 'Rubik', sans-serif;
+}
+.barraTop .datosUsuario .contenido span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4F45B6;
+    font-weight: 600;
+}
+.barraTop .datosUsuario .contenido p{
+    margin-bottom: .2rem;
+    font-weight: 400;
+}
+.barraCenter{
+    height: 85vh;
+    
+}
+@media (max-width:1366px){
+    .barraTop .datosUsuario .contenido p{
+        text-align: center;
+    }
+}

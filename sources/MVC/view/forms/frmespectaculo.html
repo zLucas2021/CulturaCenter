@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especatculo</title>
+    <link rel="stylesheet" href="../../../css/forms/frmespectaculo.css">
+</head>
+
+<body>
+    <div class="form">
+        <h3>Agregar Espectaculo</h3>
+        <form action="">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo" required>
+            <label for="descripcion">Descripción</label>
+            <input type="text" name="descripcion" id="descripcion" required>
+            <label for="precio">Precio Unitario de Entrada</label>
+            <input type="number" name="precio" id="precio" required max="5000" min="200">
+            <label for="imagen">Imagen</label>
+            <input type="file" name="imagen" id="imagen">
+
+            <div>
+                <label for="funciones">Cantidad de Funciones</label>
+                <select name="funciones" id="funciones">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+
+            <div class="caja" id="caja">
+                <div class="contenidoVariable">
+                    <p id="opc1">Opcion 1</p>
+                    <div id="caja1">
+                        <label>Seleccionar Sala</label><select name="sala" id="sala">
+                            <option value="1">Cine</option>
+                            <option value="2">Teatro</option>
+                        </select>
+                        <div class="horarios">
+                            <div class="fecha"><label for="fecha1">Seleccione La Fecha</label><input required type="date"
+                                    name="fecha1" id="fecha1"></div>
+                            <div class="hora"><label for="hora1">Hora</label><input required type="time" name="hora1" id="hora1">
+                            </div>
+                            <div class="contActivo"><label for="enweb1">Mostrar en el Sitio Web</label>
+                                <div><input type="radio" name="enweb1" id="si1" required><label for="si1">Si Mostrar</label></div>
+                                <div><input type="radio" name="enweb1" id="no1" required><label for="no1">No Mostrar</label></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+<script src="../../../js/frmespectaculo.js"></script>
+
+</html>

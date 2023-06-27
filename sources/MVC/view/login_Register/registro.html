@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/login/registro.css">
+    <title>Registrate</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="">Inicio</a>
+        <a href="login.html">Ingresar</a>
+    </div>
+    <div class="boxform">
+        <h3><span>Crea una Cuenta</span></h3>
+        <form action="../php/login/registrar.php" method="post" id="form_registro" class="formulario">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" required>
+            <label for="correo">Correo Electronico</label>
+            <input type="email" name="correo" id="correo" placeholder="nombre@example.com" required>
+            <label for="dni">Numero de Documento</label>
+            <input type="text" name="dni" id="dni" placeholder="Sin Puntos" required>
+            <label for="dni">Numero de Telefono</label>
+            <input type="text" name="telefono" id="telefono" placeholder="Sin guiones" required> 
+            <label for="contrasenia">Contraseña</label>
+            <div class="div-password">
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required>
+                <button type="button" id="btn-mostrar-pasw"><img src="../img/ojo.png" alt=""></button>
+            </div>
+            <span>Al crear una cuenta, aceptan nuestros <a href="#">Terminos y condiciones</a> y usted confirma que a leido y aceptado nuestra Politica</span>
+            <input type="submit" value="Continuar" class="button" id="btn_registrar">
+            <input type="reset" value="Borrar" class="borrar">
+            <!--
+            <a href="#">Cancelar</a>
+            --> 
+        </form>
+    </div>
+    <script src="../../../js/registro.js"></script>
+</body>
+</html>
