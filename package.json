@@ -1,0 +1,26 @@
+{
+  "name": "culturacenter",
+  "version": "1.0.0",
+  "description": "Proyecto Cultura Center",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zLucas2021/CulturaCenter.git"
+  },
+  "keywords": [
+    "Cultura",
+    "Center"
+  ],
+  "author": "Lucas Alfonsin - Edgardo Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zLucas2021/CulturaCenter/issues"
+  },
+  "homepage": "https://github.com/zLucas2021/CulturaCenter#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.0"
+  }
+}
