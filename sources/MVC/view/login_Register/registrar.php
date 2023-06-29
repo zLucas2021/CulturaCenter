@@ -1,7 +1,7 @@
 <?php
-    require_once('../Conexion/Conexion.php');
-    require_once('../controlador/usuarios.php');
-    require_once('../modelo/usuario.php');
+    require_once('../../../util/Conexion.php');
+    require_once('../../controller/usuarios.php');
+    require_once('../../model/usuario.php');
     $conexion = new Conexion();
     $isConex = $conexion->abrirConexion();
     
@@ -11,7 +11,6 @@
         $usuario->setContrasenia($_POST['contrasenia']);
         $usuario->setUsuario($_POST["correo"]);
         $usuario->setEmail($_POST["correo"]);
-        $usuario->setDni($_POST["dni"]);
         $usuario->setRol("U");        
         $usuario->setTelefono($_POST["telefono"]);
         $usuarios = new Usuarios();
