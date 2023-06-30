@@ -11,8 +11,7 @@ class Usuarios extends Conexion{
     }
     public function registrar(Usuario $usuario,$conexion){
         try{
-            $query="INSERT INTO usuarios  VALUES (0,'".$usuario->getUsuario()."','".$usuario->getNombre()."','".$usuario->getContrasenia()."','".$usuario->getEmail()."',".$usuario->getTelefono().",'".$usuario->getRol()."')";
-            echo $query;
+            $query="INSERT INTO usuarios  VALUES (0,'".$usuario->getUsuario()."','".$usuario->getNombre()."','".$usuario->getContrasenia()."','".$usuario->getEmail()."',".$usuario->getTelefono().",'".$usuario->getRol()."')";            
             $resultado = mysqli_query($conexion,$query);
             return $resultado;
         }
