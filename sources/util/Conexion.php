@@ -14,7 +14,7 @@ class Conexion{
             $this->host="localhost";
             $this->usr="root";
             $this->pasw="";
-            $this->db="centro_cultural";
+            $this->db="culturacenter";
             $this->puerto="3307";//3307
             $this->conexion_db=null;
             $this->dsn=null;

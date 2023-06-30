@@ -7,7 +7,7 @@ class Usuario{
     private $contrasenia;
     private $email;
     private $telefono;
-    private $dni;
+    
     public function __construct()
     {
     }
@@ -33,9 +33,6 @@ class Usuario{
     function setTelefono($telefono){
         $this->telefono = $telefono;
     }
-    function setDni($dni){
-        $this->dni = $dni;
-    }
     //Getters
     function getId(){
         return $this->id;
@@ -58,8 +55,6 @@ class Usuario{
     function getTelefono(){
         return $this->telefono;
     }
-    function getDni(){
-        return $this->dni;
-    }
+
 }
 ?>
