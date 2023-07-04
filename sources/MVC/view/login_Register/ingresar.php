@@ -9,12 +9,23 @@
         $usuario->setNombre($_POST['username']);
         $usuario->setContrasenia($_POST['password']);
         $usuarios = new Usuarios();
-        if ($usuarios->ingresar($usuario,$isConex)>0){
-            header("Location:../administracion/index.html");
+        $consulta = $usuarios->ingresar($usuario,$isConex);   
+        $datos = $consulta->fetch_array();                       
+        if ($consulta->num_rows>0){
+            crearSesion($datos[0],$datos[2],$datos[6]);
+            echo $_SESSION["usuario"]["id"];
+            header("Location:../administracion/index.php");
         }else{
             echo 'Ingreso no Exitoso';
         }
 }else{
     echo 'No conecto en la base de Datos';
+}
+function crearSesion($id,$nombre,$rol){
+    session_start();
+    $_SESSION["usuario"] = array();
+    $_SESSION["usuario"]["id"]=$id;
+    $_SESSION["usuario"]["Nombre"]=$nombre;
+    $_SESSION["usuario"]["rol"]=$rol;
 }
 ?>

@@ -1,0 +1,13 @@
+.contPublicidad .datosPublicidad {
+    width: 95%;
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contEspectaculo .datosPublicidad img {
+    object-fit: cover;
+}
