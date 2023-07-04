@@ -7,7 +7,7 @@ class Usuarios extends Conexion{
         }catch (Exception $e){
             echo $e->getMessage();
         }
-        return $resultado->num_rows;
+        return $resultado;
     }
     public function registrar(Usuario $usuario,$conexion){
         try{

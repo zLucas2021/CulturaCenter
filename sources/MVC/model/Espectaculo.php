@@ -1,18 +1,40 @@
 <?php
-class Expectaculo{
-    public $id;
-    public $titulo;
-    public $descripcion;
-    public $precio;
-    public $url_img;
-    public $video;
-    public $organizador;
-    public $fecha;
-    public $duracion;
-    public $genero;
-    public $encargado;
-    public $isActivo;
-    public $tipo;
+abstract class Expectaculo{
+    private $id;
+    private $titulo;
+    private $descripcion;
+    private $precio;
+    private $url_img;
+    private $fecha;
+    private $encargado;
+    private $isActivo;
+    private $tipo;
+
+    /**
+     * Esta Funcion carga los valores de los eventos, solo valores basicos 
+     * y necesarios para el evento
+     * Para cargar los elemntos graficos (imagen y video) ,usar los Sets correspondientes
+     * 
+     * @access public 
+     * @param int $id
+     * @param string $titulo
+     * @param string $descripcion
+     * @param float $precio
+     * @param Date $fecha
+     * @param string $genero
+     * @param int $encargado
+     * @param boolean $isActivo
+     * @return Null
+     */
+    public function cargarValores($id,$titulo,$descripcion,$precio,$fecha,$encargado,$isActivo){
+        $this->setId($id);
+        $this->setTitulo($titulo);
+        $this->setDescripcion($descripcion);
+        $this->setPrecio($precio);
+        $this->setFecha($fecha);
+        $this->setEncargado($encargado);
+        $this->SetActivo($isActivo);
+    }
     
     //*Setters
     function setId($id){
@@ -30,26 +52,18 @@ class Expectaculo{
     function setUrl_Img($url_img){
         $this->url_img = $url_img;
     }
-    function setVideo($video){
-        $this->video = $video;
-    }
-    function setOrganizador($organizador){
-        $this->organizador = $organizador;
-    }
+    
     function setFecha($fecha){
         $this->fecha = $fecha;
-    }
-    function setDuracion($duracion){
-        $this->duracion = $duracion;
-    }
-    function setGenero($genero){
-        $this->genero= $genero;
     }
     function setEncargado($encargado){
         $this->encargado = $encargado;
     }
     function SetActivo($isActivo){
         $this->isActivo = $isActivo;
+    }
+    function setTipo($tipo) {
+        $this->tipo = $tipo;
     }
     //*Getters
     function getId(){
@@ -67,17 +81,8 @@ class Expectaculo{
     function getUrl_Img(){
         return $this->url_img;
     }
-    function getVideo(){
-        return $this->video;
-    }
-    function getOrganizador(){
-        return $this->organizador;
-    }
     function getFecha(){
         return $this->fecha;
-    }
-    function getDuracion(){
-        return $this->duracion;
     }
     function getEncargado(){
         return $this->encargado;
