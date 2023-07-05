@@ -16,6 +16,7 @@ if (empty($_SESSION["usuario"])){
     <link rel="stylesheet" href="../../../css/administracion/espectaculos.css">
     <link rel="stylesheet" href="../../../css/public/boostrap_include.css">
     <link rel="stylesheet" href="../../../css/administracion/publicidad.css">
+    <link rel="stylesheet" href="../../../css/administracion/usuario.css">
 </head>
 <body>
     <div class="barraLeft">
@@ -26,7 +27,7 @@ if (empty($_SESSION["usuario"])){
             <button name="Pelicula"><img src="../../../../media/administracion/pelicula.png" alt="Peliculas"></button>
             <button name="Evento"><img src="../../../../media/administracion/evento.png" alt="Eventos"></button>
             <button name="Publicidad"><img src="../../../../media/administracion/publicidad.png" alt="Publicidad"></button>
-            <button><img src="../../../../media/administracion/usuarios.png" alt="Usuarios"></button>
+            <button name="Usuario"><img src="../../../../media/administracion/usuarios.png" alt="Usuarios"></button>
             <button><img src="../../../../media/administracion/informe.png" alt="Informes"></button>
         </form>
     </div>
@@ -53,6 +54,8 @@ if (empty($_SESSION["usuario"])){
         }
         elseif(isset($_GET["Publicidad"])){
             echo seccionPublicidad();
+        }elseif(isset($_GET['Usuario'])){
+            echo seccionUsuario();
         }
 
         if(isset($_POST["salir"])){

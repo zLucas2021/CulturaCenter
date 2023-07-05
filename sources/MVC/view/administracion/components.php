@@ -95,3 +95,63 @@ function footer()
         </div>
     </div>';
 }
+
+function seccionUsuario(){
+    $rows = [
+        [
+            'id' => '1',
+            'nombre' => 'Perez',
+            'rol' => 'Admin',
+        ],
+        [
+            'id' => '2',
+            'nombre' => 'Gomez',
+            'rol' => 'Boletero',
+        ],
+        [
+            'id' => '3',
+            'nombre' => 'Marez',
+            'rol' => 'Admin',
+        ],
+        [
+            'id' => '4',
+            'nombre' => 'Lopez',
+            'rol' => 'Gestor',
+        ],
+    ];
+    $posi = 0;
+    $cont  = count($rows);
+    echo '<div class="barra">
+            <div class="contCenter">
+                <h4 class="titulo">Usuarios</h4>
+                <a class="btn boton" href="../forms/frmusuario.html">Agregar <img src="../../../../media/public/add.svg" class="icon" ></a>
+            </div>
+            <div class="contenido">';
+                while ($posi < $cont) {
+                    echo '<div class="contacto">
+                            <div class="datos">
+                                <button class="btn"><img class="modificar" src="../../../../media/public/update.svg" alt="iconoModificar"></button>
+                                <button class="btn"><img class="eliminar" src="../../../../media/public/delete.svg" alt="iconoEliminar"></button>
+                            </div>
+                            <div class="contImg">
+                                <img src="" alt="">
+                            </div>
+                            <p>'.$rows[$posi]['nombre'].'</p>
+                            <span>'.$rows[$posi]['rol'].'</span>
+                            <div class="datosContacto">
+                                <button class="btn"><img src="../../../../media/administracion/email.png" alt="E-mail"></button>
+                                <button class="btn"><img src="../../../../media/administracion/telefono.png" alt=""></button>
+                            </div>
+                    </div>';
+                    $posi++;
+                }
+            echo '</div>';
+}
+
+function seccionGrafico(){
+    return '<div class="barraCenter">
+    <div class="contCenter">
+        <h4 class="titulo">Informes</h4>
+    </div>
+</div>';
+}
