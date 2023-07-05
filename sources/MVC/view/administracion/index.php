@@ -16,7 +16,7 @@ if (empty($_SESSION["usuario"])){
     <link rel="stylesheet" href="../../../css/administracion/espectaculos.css">
     <link rel="stylesheet" href="../../../css/public/boostrap_include.css">
     <link rel="stylesheet" href="../../../css/administracion/publicidad.css">
-    <link rel="stylesheet" href="../../../css/usuario/usuario.css">
+    <link rel="stylesheet" href="../../../css/administracion/usuario.css">
 </head>
 <body>
     <div class="barraLeft">
