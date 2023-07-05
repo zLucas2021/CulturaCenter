@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,700;0,900;1,300&display=swap');
+@import url("../public/variables.css");
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.barra{
+    height: 85vh;
+}
+
+.barra .contacto{
+    border: 1px solid #F5EFFC;
+    width: 18rem;
+    height: 15rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.barra .contacto img{
+    width: 3rem;
+    height: 3rem;
+    background-color: #8983C1;
+    border-radius: 5px;
+    border: none;
+}
+.barra .contacto p{
+    margin-bottom: 0;
+}
+.barra .contacto span{
+    font-size: .7rem;
+    font-weight: 400;
+    color: #D1D1D1;
+    margin-bottom: 1rem;
+}
+.barra .contacto .datosContacto{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.barra .contacto .datosContacto button{
+    width: 40%;
+    height: 80%;
+    border: none;
+    padding: .3rem 0;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECEEFB;
+}
+.barra .contacto .datosContacto button:hover{
+    cursor: pointer;
+    translate:0 1px;
+}
+.barra .contacto .datosContacto button:hover img{
+    filter: drop-shadow(2px 2px 1px #4F45B6);
+}
+.barra .contacto .datosContacto button img{
+    background-color: transparent;
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+}
+
+/**/
+.barra .contenido {
+    display:flex; 
+    width:100%; 
+    justify-content:center; 
+    align-content:center;
+}
+
+.barra .contCenter .boton{
+    background-color: var(--color-principal);
+    margin-right: 0.5rem;
+}
+
+.barra .contacto .datos{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 2rem;
+    margin-top: -1rem;
+}
+.barra .contacto .datos button{
+    width: 20%;
+    height: 80%;
+    border: none;
+    padding: .4rem 0;
+    border-radius: 1px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+}
+.barra .contacto .datos button:hover{
+    cursor: pointer;
+    translate:0 1px;
+}
+.barra  .contacto .datos button:hover img{
+    filter: drop-shadow(2px 2px 1px #fff);
+}
+.barra .contenido .contacto .datos button img{
+    background-color: transparent;
+    object-fit: contain;
+    width: 60%;
+    height: 70%;
+}
+
+.barra .contenido .contacto .datos .modificar{
+    background-color: var(--color-advertencia);
+    width: 60%;
+}
+
+.barra .contenido .contacto .datos .eliminar{
+    background-color: var(--color-peligro);
+    width: 60%;
+}
