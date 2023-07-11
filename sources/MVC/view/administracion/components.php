@@ -43,7 +43,7 @@ function seccionPublicidad()
         <div class="divContenedor">
             ' . contBusqueda() . '
             <div class ="contPublicidad">
-            ' . datosPublicidad(0, "LA PUBLI", "") . '
+            ' . datosPublicidad(0, "LA PUBLI", "a") . '
             </div>'
         . footer() . '                        
         </div>

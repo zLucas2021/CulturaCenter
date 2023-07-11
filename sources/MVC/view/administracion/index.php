@@ -4,6 +4,10 @@ session_start();
 if (empty($_SESSION["usuario"])){
     header("Location:../login_Register/");
 }
+if(isset($_POST["salir"])){
+    unset($_SESSION["usuario"]);
+    header('Location: ../login_Register/index.php ');
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -61,13 +65,10 @@ if (empty($_SESSION["usuario"])){
             echo seccionInforme();
         }
 
-        if(isset($_POST["salir"])){
-            unset($_SESSION["usuario"]);
-            header("Location:../login_Register/");
-        }
 ?>
         
     </div>
     
 </body>
 </html>
+
