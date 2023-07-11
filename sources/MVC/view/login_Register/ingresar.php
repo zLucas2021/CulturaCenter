@@ -13,8 +13,7 @@
         $datos = $consulta->fetch_array();                       
         if ($consulta->num_rows>0){
             crearSesion($datos[0],$datos[2],$datos[6]);
-            echo $_SESSION["usuario"]["id"];
-            header("Location:../administracion/index.php");
+            header('Location:../administracion/index.php');
         }else{
             echo 'Ingreso no Exitoso';
         }

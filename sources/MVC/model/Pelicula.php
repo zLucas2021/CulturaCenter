@@ -10,7 +10,6 @@ class Pelicula extends Expectaculo {
         $this->setPrecio(0);
         $this->setUrl_Img("");
         $this->setFecha("");
-        $this->setDuracion("");
         $this->setEncargado(0);
         $this->SetActivo(false);
         $this->setTipo("P");
