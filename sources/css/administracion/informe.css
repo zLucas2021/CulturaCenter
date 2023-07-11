@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,700;0,900;1,300&display=swap');
+@import url("../public/variables.css");
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.barra{
+    height: 85vh;
+}
+
+.barra .botones{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.barra .botones button{
+    width: 15%;
+    height: 35px;
+    border: none;
+    padding: .3rem 0;
+    border-radius: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: var(--color-principal);
+    margin-right: 5rem;
+}
+.barra .botones button:hover{
+    cursor: pointer;
+    translate:0 1px;
+}
+.barra .botones button:hover img{
+    filter: drop-shadow(2px 2px 1px #4F45B6);
+}
+.barra .botones button img{
+    background-color: transparent;
+    object-fit: contain;
+    width: 20px;
+    height: 10px;
+}
+
+/**/
+.barra .cuerpo {
+    display:flex; 
+    width:90%; 
+    justify-content:center; 
+    align-content:center;
+    margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.barra .botones select{
+    width:15%; 
+    border-color:var(--color-principal); 
+    border-radius: 10px; 
+    height:80%; 
+    margin-right:2rem;
+}
+
+.barra .cuerpo .imagen{
+    width: 70%; 
+    height:100%; 
+    margin:10px 30px;
+}
+
+/*tarjeta*/
+.container{
+    border: 1px solid var(--color-acento-2);
+    width: 15rem;
+    height: 13rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: self-start;
+}
+.container img{
+    width: 7rem;
+    height: 7rem;
+    background-color: #8983C1;
+    border-radius: 5px;
+    border: none;
+    margin-top: 4rem;
+}
+.container p{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+.container span{
+    font-size: .7rem;
+    font-weight: 400;
+    color: var(--color-acento-1);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
