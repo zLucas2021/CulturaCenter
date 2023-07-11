@@ -96,62 +96,77 @@ function footer()
     </div>';
 }
 
+function datosUsuario($nomb, $rol){
+    return '<div class="datos">
+                <button class="btn"><img class="modificar" src="../../../../media/public/update.svg" alt="iconoModificar"></button>
+                <button class="btn"><img class="eliminar" src="../../../../media/public/delete.svg" alt="iconoEliminar"></button>
+            </div>
+            <div class="contImg">
+                <img src="" alt="">
+            </div>
+            <p>'.$nomb.'</p>
+            <span>'.$rol.'</span>
+            <div class="datosContacto">
+                <button class="btn"><img src="../../../../media/administracion/email.png" alt="E-mail"></button>
+                <button class="btn"><img src="../../../../media/administracion/telefono.png" alt=""></button>
+            </div>';
+}
 function seccionUsuario(){
-    $rows = [
-        [
-            'id' => '1',
-            'nombre' => 'Perez',
-            'rol' => 'Admin',
-        ],
-        [
-            'id' => '2',
-            'nombre' => 'Gomez',
-            'rol' => 'Boletero',
-        ],
-        [
-            'id' => '3',
-            'nombre' => 'Marez',
-            'rol' => 'Admin',
-        ],
-        [
-            'id' => '4',
-            'nombre' => 'Lopez',
-            'rol' => 'Gestor',
-        ],
-    ];
-    $posi = 0;
-    $cont  = count($rows);
-    echo '<div class="barra">
+    return '<div class="barra">
             <div class="contCenter">
                 <h4 class="titulo">Usuarios</h4>
                 <a class="btn boton" href="../forms/frmusuario.html">Agregar <img src="../../../../media/public/add.svg" class="icon" ></a>
             </div>
-            <div class="contenido">';
-                while ($posi < $cont) {
-                    echo '<div class="contacto">
-                            <div class="datos">
-                                <button class="btn"><img class="modificar" src="../../../../media/public/update.svg" alt="iconoModificar"></button>
-                                <button class="btn"><img class="eliminar" src="../../../../media/public/delete.svg" alt="iconoEliminar"></button>
-                            </div>
-                            <div class="contImg">
-                                <img src="" alt="">
-                            </div>
-                            <p>'.$rows[$posi]['nombre'].'</p>
-                            <span>'.$rows[$posi]['rol'].'</span>
-                            <div class="datosContacto">
-                                <button class="btn"><img src="../../../../media/administracion/email.png" alt="E-mail"></button>
-                                <button class="btn"><img src="../../../../media/administracion/telefono.png" alt=""></button>
-                            </div>
-                    </div>';
-                    $posi++;
-                }
-            echo '</div>';
+            <div class="contenido">
+                <div class="contacto">'.datosUsuario('Perez', 'Admin').'</div>
+                <div class="contacto">'.datosUsuario('Gomez', 'Boletero').'</div>
+                <div class="contacto">'.datosUsuario('Marez', 'Admin').'</div>
+                <div class="contacto">'.datosUsuario('Suarez', 'Gestor').'</div>
+            </div>
+        </div>';
 }
 
-function seccionGrafico(){
-    return '<div class="barraCenter">
+function datosInforme($cantidad, $titulo, $porcentaje){
+    return '<div class="container">
+        <div class="texto">
+            <p>'.$cantidad.'</p>
+            <span>'.$titulo.'</span><br>
+            <span>'.$porcentaje.'</span>
+        </div>
+        <div class="contImg">
+            <img src="" alt="">
+        </div>
+    </div>';
+}
+
+function seccionInforme(){
+    return '<div class="barra">
     <div class="contCenter">
         <h4 class="titulo">Informes</h4>
+    </div>
+    <div class="cuerpo">
+        <div class="imagen">'.datosInforme(1450, "Ventas Diarias", "- 15%").'</div>
+        <div class="imagen">'.datosInforme(950, "Ventas Online", "+ 5%").'</div>
+        <div class="imagen">'.datosInforme(950, "Ventas Fisica", "+ 20%").'</div>
+        <div class="imagen">'.datosInforme(4250 , "Harry Potter", "Ranking").'</div>
+    </div>
+    <div class="botones">
+        <!--<form method="post"> -->
+            <select name="tipoInforme" id="tipoInforme" class="opcion">
+                <option value="">Tipo de Informe</option>
+                <option value="">Ranking de Ventas</option>
+                <option value="">Ventas Totales</option>
+                <option value="">Ventas Online/Efectivo</option>
+            </select>
+            <select name="Fecha" id="" class="opcion">
+                <option value="">Fecha</option>
+                <option value="">Diario</option>
+                <option value="">Semanal</option>
+                <option value="">Mensual</option>
+                <option value="">Anual</option>
+            </select>
+            <button class="btn"><img src="../../../../media/public/add.svg" alt="">Generar Informe</button>
+        <!--</form>-->
     </div>
 </div>';
 }
